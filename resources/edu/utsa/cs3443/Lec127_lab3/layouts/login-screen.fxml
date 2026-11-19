@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="18"
+      prefWidth="550" prefHeight="500"
+      style="-fx-background-color: #f4f7fb;"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.utsa.cs3443.Lec127_lab4.LoginScreenController">
+
+    <padding>
+        <Insets top="30" right="50" bottom="30" left="50"/>
+    </padding>
+
+    <ImageView fitWidth="140"
+               fitHeight="110"
+               preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png"/>
+        </image>
+    </ImageView>
+
+    <Label text="GERO Login"
+           style="-fx-font-size: 26px;
+                  -fx-font-weight: bold;
+                  -fx-text-fill: #17365d;"/>
+
+    <Label text="Aid Ship Management System"
+           style="-fx-font-size: 14px;
+                  -fx-text-fill: #555555;"/>
+
+    <VBox spacing="8" maxWidth="300">
+        <Label text="Username"/>
+        <TextField fx:id="usernameField"
+                   promptText="Enter username"/>
+
+        <Label text="Password"/>
+        <PasswordField fx:id="passwordField"
+                       promptText="Enter password"/>
+    </VBox>
+
+    <Button text="Login"
+            onAction="#handleLogin"
+            prefWidth="160"
+            style="-fx-background-color: #17365d;
+                   -fx-text-fill: white;
+                   -fx-font-size: 14px;"/>
+
+    <Label fx:id="errorLabel"
+           text=""
+           textFill="RED"
+           wrapText="true"/>
+
+</VBox>
